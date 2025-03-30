@@ -1,0 +1,19 @@
+.layout {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.content404 {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.content404 :global(.ant-typography) {
+  display: flex;
+  align-items: center;
+  margin: 30px;
+}

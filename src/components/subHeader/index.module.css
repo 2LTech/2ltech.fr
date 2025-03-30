@@ -1,0 +1,16 @@
+.layout {
+  background: #98d2e1 !important;
+  min-height: 500px !important;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff !important;
+}
+
+.content :global(.ant-typography) {
+  color: inherit;
+}
