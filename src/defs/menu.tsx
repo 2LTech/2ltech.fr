@@ -3,7 +3,7 @@ import {
   HomeOutlined,
   MedicineBoxOutlined,
   ShopOutlined,
-  TeamOutlined,
+  TeamOutlined
 } from '@ant-design/icons'
 
 export interface MenuItem {
@@ -18,32 +18,32 @@ const menuItems: MenuItem[] = [
     key: 'home',
     label: 'Accueil',
     icon: <HomeOutlined />,
-    href: '/',
+    href: '/'
   },
   {
     key: 'dev',
     label: 'Développement',
     icon: <ApiOutlined />,
-    href: '/developpement',
+    href: '/developpement'
   },
   {
     key: 'dep',
     label: 'Dépannage',
     icon: <MedicineBoxOutlined />,
-    href: '/depannage',
+    href: '/depannage'
   },
   {
     key: 'apropos',
     label: 'À propos',
     icon: <TeamOutlined />,
-    href: '/apropos',
+    href: '/apropos'
   },
   {
     key: 'contact',
     label: 'Contact',
     icon: <ShopOutlined />,
-    href: '/contact',
-  },
+    href: '/contact'
+  }
 ]
 
 export default menuItems

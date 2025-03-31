@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://2ltech.fr
+
+# Sitemaps
+Sitemap: https://2ltech.fr/sitemap.xml

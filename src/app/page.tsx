@@ -46,7 +46,8 @@ const HomePage = () => (
             Est laborum adipisci sit velit corrupti ea animi labore aut eius
             libero eum magni laborum. Et molestiae ullam 33 galisum internos ut
             autem consectetur quo cumque explicabo ab vero tenetur et incidunt
-            ullam. Eum assumenda galisum ea nihil corporis et eveniet numquam.{' '}
+            ullam. Eum assumenda galisum ea nihil corporis et eveniet
+            numquam.{' '}
           </p>
           <p>
             Sit quod adipisci et blanditiis nihil hic consequatur repellat ut

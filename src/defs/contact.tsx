@@ -14,20 +14,20 @@ const contactItems: ContactItem[] = [
     label: '1 avenue Belair, 19260 Treignac',
     icon: <HomeOutlined />,
     href: 'https://maps.app.goo.gl/kfM2rLTJkSPD4nxk8',
-    blank: true,
+    blank: true
   },
   {
     key: 'mail',
     label: 'contact@2ltech.fr',
     icon: <MailOutlined />,
-    href: 'mailto:contact@2ltech.fr',
+    href: 'mailto:contact@2ltech.fr'
   },
   {
     key: 'phone',
     label: '07........',
     icon: <PhoneOutlined />,
-    href: 'tel:07........',
-  },
+    href: 'tel:07........'
+  }
 ]
 
 export default contactItems

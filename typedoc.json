@@ -1,0 +1,6 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "name": "2LTech",
+  "entryPoints": ["src"],
+  "entryPointStrategy": "expand"
+}

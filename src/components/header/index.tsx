@@ -6,6 +6,10 @@ import menuItems from '../../defs/menu'
 
 import styles from './index.module.css'
 
+/**
+ * Header
+ * @returns Header
+ */
 const Header = () => {
   // Router
   const router = useRouter()
@@ -27,11 +31,11 @@ const Header = () => {
   return (
     <Layout.Header className={styles.header}>
       <div className={styles.logo}>
-        <Image src='/logo-nobackground.png' alt='Logo' width={64} height={64} />
+        <Image src="/logo-nobackground.png" alt="Logo" width={64} height={64} />
         <Typography.Text strong>2LTech</Typography.Text>
       </div>
       <Menu
-        mode='horizontal'
+        mode="horizontal"
         className={styles.menu}
         items={menuItems}
         onClick={onClick}
