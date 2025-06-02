@@ -1,0 +1,13 @@
+.content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.content :global(.ant-typography) {
+  display: flex;
+  align-items: center;
+  margin: 30px;
+}

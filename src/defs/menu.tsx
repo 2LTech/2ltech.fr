@@ -2,18 +2,12 @@ import {
   ApiOutlined,
   HomeOutlined,
   MedicineBoxOutlined,
+  ProductOutlined,
   ShopOutlined,
   TeamOutlined
 } from '@ant-design/icons'
 
-export interface MenuItem {
-  key: string
-  label: string
-  icon: React.ReactElement
-  href: string
-}
-
-const menuItems: MenuItem[] = [
+const menuItems = [
   {
     key: 'home',
     label: 'Accueil',
@@ -33,6 +27,12 @@ const menuItems: MenuItem[] = [
     href: '/depannage'
   },
   {
+    key: 'install',
+    label: 'Installation',
+    icon: <ProductOutlined />,
+    href: '/installation'
+  },
+  {
     key: 'apropos',
     label: 'À propos',
     icon: <TeamOutlined />,
@@ -45,5 +45,7 @@ const menuItems: MenuItem[] = [
     href: '/contact'
   }
 ]
+
+export type MenuItem = (typeof menuItems)[number]
 
 export default menuItems

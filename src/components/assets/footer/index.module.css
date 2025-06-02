@@ -1,0 +1,44 @@
+.footer {
+  color: white !important;
+  margin-top: auto;
+}
+
+.descriptionLabel {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.descriptionContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.divider {
+  border-color: white;
+}
+
+.legal {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px !important;
+}
+
+.legal a {
+  color: unset;
+}
+
+.smallHidden {
+  color: #79daeb;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 10px !important;
+  }
+
+  .smallHidden {
+    display: none;
+  }
+}

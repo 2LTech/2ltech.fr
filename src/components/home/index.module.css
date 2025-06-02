@@ -1,0 +1,18 @@
+.subHeaderTitle {
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  padding: 0 50px;
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 0 10px;
+  }
+
+  .content :global(.ant-list-item-extra) {
+    margin-left: 10px !important;
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "sonarlint.connectedMode.project": {
+    "connectionId": "2ltech",
+    "projectKey": "2ltech.fr"
+  },
+  "spellright.language": ["fr-FR-3-0."],
+  "spellright.documentTypes": [
+    "markdown",
+    "latex",
+    "plaintext",
+    "typescriptreact"
+  ]
+}

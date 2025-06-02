@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo strong {
+  font-size: 26px;
+  line-height: 26px;
+}
+
+@media (max-width: 768px) {
+  .header {
+    justify-content: center;
+  }
+}

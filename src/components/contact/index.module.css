@@ -1,0 +1,21 @@
+.content {
+  flex: 1 1 auto;
+}
+
+.cards {
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: space-around;
+}
+
+.card {
+  min-width: 500px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    min-width: 100%;
+  }
+}

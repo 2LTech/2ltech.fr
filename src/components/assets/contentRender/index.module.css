@@ -1,0 +1,41 @@
+.listItem {
+  border-block-end: none !important;
+  margin-bottom: 15px;
+}
+
+.listItemExtra {
+  display: flex;
+}
+
+.listItemExtra img {
+  width: 126px;
+  height: 126px;
+  margin: auto;
+}
+
+.listItemMini {
+  border-block-end: none !important;
+}
+
+.listItemExtraMini {
+  display: flex;
+}
+
+.listItemExtraMini img {
+  width: 64px;
+  height: 64px;
+  margin: auto;
+}
+
+.anchor {
+  display: block;
+  position: relative;
+  top: -200px;
+  visibility: hidden;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}

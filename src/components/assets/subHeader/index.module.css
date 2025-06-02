@@ -1,0 +1,22 @@
+.layout {
+  background: #79daeb !important;
+  min-height: unset !important;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff !important;
+}
+
+.content :global(.ant-typography) {
+  color: inherit;
+  text-align: center;
+  margin: 0.5em 0 !important;
+}
+
+.content .description {
+  margin: 1.2em 0;
+}

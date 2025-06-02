@@ -1,33 +1,33 @@
 'use client'
 
-import { ConfigProvider, Layout, Typography } from 'antd'
+import { ConfigProvider, Layout } from 'antd'
 
-import theme from './themeConfig'
+import theme from '@/app/themeConfig'
 
-import Header from '../components/header'
-import Content from '../components/content'
+import Sider from '@/components/assets/sider'
+import Header from '@/components/assets/header'
+import Content from '@/components/assets/content'
+
+import NotFound from '@/components/notFound'
 
 import styles from './page.module.css'
-import Image from 'next/image'
 
-const NotFound = () => (
+/**
+ * Not found
+ * @returns NotFound
+ */
+const NotFoundPage = () => (
   <ConfigProvider theme={theme}>
-    <Layout className={styles.layout}>
-      <Header />
-      <Content>
-        <div className={styles.content404}>
-          <Typography.Title level={1}>Erreur 404</Typography.Title>
-          <Typography.Title level={3}>
-            La page que vous cherchez n&apos;existe pas
-          </Typography.Title>
-          <Typography.Text>
-            <Image src="/mushroom.jpg" width={100} height={100} alt="" />
-            Pas non plus un champignon par ici...
-          </Typography.Text>
-        </div>
-      </Content>
+    <Layout className={styles.mainLayout} hasSider>
+      <Sider />
+      <Layout className={styles.layout}>
+        <Header />
+        <Content>
+          <NotFound />
+        </Content>
+      </Layout>
     </Layout>
   </ConfigProvider>
 )
 
-export default NotFound
+export default NotFoundPage

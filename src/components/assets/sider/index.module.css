@@ -1,0 +1,16 @@
+.sider {
+  background: white !important;
+  border-right: 1px solid #79daeb;
+}
+
+.menu {
+  margin-top: 10px !important;
+  border-inline-end: none !important;
+}
+
+@media (max-width: 768px) {
+  .sider {
+    position: absolute !important;
+    z-index: 2;
+  }
+}

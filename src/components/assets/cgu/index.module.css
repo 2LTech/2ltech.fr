@@ -1,0 +1,7 @@
+.content {
+  padding: 20px;
+}
+
+.content * {
+  line-height: 2em !important;
+}

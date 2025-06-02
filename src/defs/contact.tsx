@@ -1,14 +1,11 @@
-import { HomeOutlined, MailOutlined, PhoneOutlined } from '@ant-design/icons'
+import {
+  HomeOutlined,
+  MailOutlined,
+  PhoneOutlined,
+  WhatsAppOutlined
+} from '@ant-design/icons'
 
-export interface ContactItem {
-  key: string
-  label: string
-  icon: React.ReactElement
-  href: string
-  blank?: boolean
-}
-
-const contactItems: ContactItem[] = [
+const contactItems = [
   {
     key: 'address',
     label: '1 avenue Belair, 19260 Treignac',
@@ -24,10 +21,19 @@ const contactItems: ContactItem[] = [
   },
   {
     key: 'phone',
-    label: '07........',
+    label: '07 43 10 28 86',
     icon: <PhoneOutlined />,
-    href: 'tel:07........'
+    href: 'tel:0743102886'
+  },
+  {
+    key: 'whatsapp',
+    label: 'WhatsApp',
+    icon: <WhatsAppOutlined />,
+    href: 'https://wa.me/33743102886',
+    blank: true
   }
 ]
+
+export type ContactItem = (typeof contactItems)[number]
 
 export default contactItems
