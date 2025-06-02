@@ -20,6 +20,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Corepack
+        run: corepack enable
       - name: Checkout
         uses: actions/checkout@v4
       - name: Detect package manager
@@ -58,8 +60,6 @@ jobs:
           # If source files changed but packages didn't, rebuild from a prior cache.
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
-      - name: Corepack
-        run: corepack enable
       - name: Install dependencies
         run: yarn install
       - name: Build with Next.js
