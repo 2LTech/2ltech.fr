@@ -3,19 +3,37 @@
 }
 
 .cards {
+  width: 100%;
   padding: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 50px;
   justify-content: space-around;
 }
 
-.card {
-  min-width: 500px;
+.cardsItem {
+  width: 100%;
+  max-width: 500px;
+}
+
+.extra {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  aspect-ratio: 1.5;
+  line-height: 50%;
+}
+
+.extra iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.extra a {
+  font-size: 75%;
+  align-self: flex-end;
 }
 
 @media (max-width: 768px) {
-  .card {
-    min-width: 100%;
+  .cards {
+    padding: 20px;
   }
 }

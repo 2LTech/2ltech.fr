@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Card } from 'antd'
+import { Card, Space } from 'antd'
 
 import contactItems from '@/defs/contact'
 
@@ -15,15 +15,23 @@ const Contact = () => (
   <div className={styles.content}>
     <SubHeader title="Pour nous contacter" />
 
-    <div className={styles.cards}>
+    <Space
+      wrap
+      className={styles.cards}
+      classNames={{ item: styles.cardsItem }}
+      size="large"
+    >
       {contactItems.map((contact) => (
-        <Card key={contact.key} extra={contact.icon} className={styles.card}>
+        <Card key={contact.key} extra={contact.icon}>
           <Link href={contact.href} target={contact.blank ? '_blank' : '_self'}>
             {contact.label}
           </Link>
+          {contact.extra ? (
+            <div className={styles.extra}>{contact.extra}</div>
+          ) : null}
         </Card>
       ))}
-    </div>
+    </Space>
   </div>
 )
 
