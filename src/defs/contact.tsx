@@ -13,16 +13,31 @@ const contactItems = [
     href: 'https://maps.app.goo.gl/kfM2rLTJkSPD4nxk8',
     blank: true,
     extra: (
-      <>
-        <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=1.7920321226119995%2C45.53298638004849%2C1.795572638511658%2C45.534684865022115&amp;layer=mapnik&amp;marker=45.53383562894745%2C1.7938023805618286" />
+      <div
+        style={{
+          aspectRatio: '1.5',
+          lineHeight: '50%',
+          display: 'flex',
+          flexDirection: 'column'
+        }}
+      >
+        <iframe
+          src="https://www.openstreetmap.org/export/embed.html?bbox=1.7920321226119995%2C45.53298638004849%2C1.795572638511658%2C45.534684865022115&amp;layer=mapnik&amp;marker=45.53383562894745%2C1.7938023805618286"
+          style={{
+            width: '100%',
+            height: '100%',
+            border: '1px solid #79daeb'
+          }}
+        />
         <br />
         <a
           href="https://www.openstreetmap.org/?mlat=45.533836&amp;mlon=1.793802#map=19/45.533836/1.793802"
           target="_blank"
+          style={{ fontSize: '75%', textAlign: 'right' }}
         >
           Afficher une carte plus grande
         </a>
-      </>
+      </div>
     )
   },
   {
