@@ -41,7 +41,9 @@ export const contentRender = (item: ContentItem) => (
     key={item.key}
     extra={item.extra}
   >
-    <a className={styles.anchor} id={item.key} />
+    <a className={styles.anchor} id={item.key}>
+      {item.key}
+    </a>
     <List.Item.Meta title={item.title} description={item.subTitle} />
     {item.content}
   </List.Item>

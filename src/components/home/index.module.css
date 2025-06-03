@@ -15,4 +15,8 @@
   .content :global(.ant-list-item-extra) {
     margin-left: 10px !important;
   }
+
+  .subHeaderDescription {
+    justify-content: center;
+  }
 }

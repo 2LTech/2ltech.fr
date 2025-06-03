@@ -42,7 +42,7 @@ const Home = () => {
         subTitle="Développement web, dépannage informatique,
 		installation réseau et bien plus encore"
         description={
-          <Space wrap>
+          <Space wrap className={styles.subHeaderDescription}>
             {dev ? (
               <Button
                 type="primary"

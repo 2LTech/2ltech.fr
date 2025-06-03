@@ -9,7 +9,7 @@ import Sider from '@/components/assets/sider'
 import Header from '@/components/assets/header'
 import Content from '@/components/assets/content'
 
-import CGU from '@/components/assets/cgu'
+import Cgu from '@/components/assets/cgu'
 
 import styles from '../page.module.css'
 
@@ -24,7 +24,7 @@ const CGUPage = () => (
       <Layout className={styles.layout}>
         <Header />
         <Content>
-          <CGU />
+          <Cgu />
         </Content>
       </Layout>
     </Layout>
