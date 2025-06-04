@@ -14,9 +14,9 @@
 .content :global(.ant-typography) {
   color: inherit;
   text-align: center;
-  margin: 0.5em 0 !important;
+  margin: 0.5em !important;
 }
 
 .content .description {
-  margin: 1.2em 0;
+  margin: 1.2em;
 }

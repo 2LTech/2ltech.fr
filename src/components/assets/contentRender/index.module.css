@@ -5,12 +5,13 @@
 
 .listItemExtra {
   display: flex;
+  align-items: center;
 }
 
 .listItemExtra img {
   width: 126px;
   height: 126px;
-  margin: auto;
+  margin: 5px;
 }
 
 .listItemMini {
@@ -19,12 +20,13 @@
 
 .listItemExtraMini {
   display: flex;
+  align-items: center;
 }
 
 .listItemExtraMini img {
   width: 64px;
   height: 64px;
-  margin: auto;
+  margin: 5px;
 }
 
 .anchor {
