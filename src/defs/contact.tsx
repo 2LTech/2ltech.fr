@@ -22,6 +22,7 @@ const contactItems = [
         }}
       >
         <iframe
+          title="Carte - 1 avenue Bel Air, 19260 Treignac"
           src="https://www.openstreetmap.org/export/embed.html?bbox=1.7920321226119995%2C45.53298638004849%2C1.795572638511658%2C45.534684865022115&amp;layer=mapnik&amp;marker=45.53383562894745%2C1.7938023805618286"
           style={{
             width: '100%',
