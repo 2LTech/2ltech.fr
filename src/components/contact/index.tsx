@@ -1,9 +1,10 @@
 import Link from 'next/link'
-import { Card, Space } from 'antd'
+import { Card, Masonry } from 'antd'
 
 import contactItems from '@/defs/contact'
 
 import SubHeader from '@/components/assets/subHeader'
+import { RestrictedContent } from '@/components/assets/framework/content'
 
 import styles from './index.module.css'
 
@@ -12,27 +13,33 @@ import styles from './index.module.css'
  * @returns Contact
  */
 const Contact = () => (
-  <div className={styles.content}>
+  <>
     <SubHeader title="Pour nous contacter" />
 
-    <Space
-      wrap
-      className={styles.cards}
-      classNames={{ item: styles.cardsItem }}
-      size="large"
-    >
-      {contactItems.map((contact) => (
-        <Card key={contact.key} extra={contact.icon}>
-          <Link href={contact.href} target={contact.blank ? '_blank' : '_self'}>
-            {contact.label}
-          </Link>
-          {contact.extra ? (
-            <div className={styles.extra}>{contact.extra}</div>
-          ) : null}
-        </Card>
-      ))}
-    </Space>
-  </div>
+    <RestrictedContent>
+      <Masonry
+        columns={{ xs: 1, md: 2 }}
+        gutter={16}
+        items={contactItems.map((contact, index) => ({
+          key: contact.key,
+          data: index,
+          children: (
+            <Card extra={contact.icon} title={contact.text}>
+              <Link
+                href={contact.href}
+                target={contact.blank ? '_blank' : '_self'}
+              >
+                {contact.label}
+              </Link>
+              {contact.extra ? (
+                <div className={styles.extra}>{contact.extra}</div>
+              ) : null}
+            </Card>
+          )
+        }))}
+      />
+    </RestrictedContent>
+  </>
 )
 
 export default Contact

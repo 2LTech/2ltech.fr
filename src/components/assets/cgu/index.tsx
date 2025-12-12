@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { Typography } from 'antd'
 
 import styles from './index.module.css'
+import { RestrictedContent } from '../framework/content'
 
 // Mail
 const mail = <a href="mailto:contact@2ltech.fr">contact@2ltech.fr</a>
@@ -11,7 +12,7 @@ const mail = <a href="mailto:contact@2ltech.fr">contact@2ltech.fr</a>
  * @returns CGU
  */
 const CGU = () => (
-  <div className={styles.content}>
+  <RestrictedContent>
     <Typography.Title level={3}>
       Conditions générales d&apos;utilisation
     </Typography.Title>
@@ -182,7 +183,7 @@ const CGU = () => (
       pouvez joindre l’éditeur aux coordonnées inscrites à l’
       <Link href="#article1">ARTICLE 1</Link>.
     </Typography.Paragraph>
-  </div>
+  </RestrictedContent>
 )
 
 export default CGU

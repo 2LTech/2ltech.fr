@@ -21,8 +21,8 @@ const SubHeader: React.FunctionComponent<Props> = ({
   subTitle,
   description
 }) => (
-  <Layout className={styles.layout}>
-    <Layout.Content className={styles.content}>
+  <div className={styles.container}>
+    <div className={styles.content}>
       {title ? <Typography.Title level={1}>{title}</Typography.Title> : null}
       {subTitle ? (
         <Typography.Title level={3}>{subTitle}</Typography.Title>
@@ -30,8 +30,8 @@ const SubHeader: React.FunctionComponent<Props> = ({
       {description ? (
         <div className={styles.description}>{description}</div>
       ) : null}
-    </Layout.Content>
-  </Layout>
+    </div>
+  </div>
 )
 
 export default SubHeader

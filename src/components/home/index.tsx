@@ -1,13 +1,15 @@
 import { useMemo } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Button, List, Space, Typography } from 'antd'
+import { Button, Space, Typography } from 'antd'
 
 import menuItems from '@/defs/menu'
 
+import { RestrictedContent } from '@/components/assets/framework/content'
+
 import SubHeader from '@/components/assets/subHeader'
 import Divider from '@/components/assets/divider'
-import { contentRenderMini } from '@/components/assets/contentRender'
+import MyMasonry from '@/components/assets/mymasonry'
 
 import { contents as devContents } from '@/components/developpement'
 import { contents as depContents } from '@/components/depannage'
@@ -78,49 +80,34 @@ const Home = () => {
       />
 
       {dev ? (
-        <div className={styles.content}>
+        <RestrictedContent>
           <Link href={dev.href}>
             <Typography.Title level={3}>{dev.label}</Typography.Title>
           </Link>
-          <List
-            itemLayout="vertical"
-            size="large"
-            dataSource={devContents}
-            renderItem={(item) => contentRenderMini(dev.href, item)}
-          />
-        </div>
+          <MyMasonry page={dev.href} items={devContents} />
+        </RestrictedContent>
       ) : null}
 
       <Divider />
 
       {dep ? (
-        <div className={styles.content}>
+        <RestrictedContent>
           <Link href={dep.href}>
             <Typography.Title level={3}>{dep.label}</Typography.Title>
           </Link>
-          <List
-            itemLayout="vertical"
-            size="large"
-            dataSource={depContents}
-            renderItem={(item) => contentRenderMini(dep.href, item)}
-          />
-        </div>
+          <MyMasonry page={dep.href} items={depContents} />
+        </RestrictedContent>
       ) : null}
 
       <Divider />
 
       {install ? (
-        <div className={styles.content}>
+        <RestrictedContent>
           <Link href={install.href}>
             <Typography.Title level={3}>{install.label}</Typography.Title>
           </Link>
-          <List
-            itemLayout="vertical"
-            size="large"
-            dataSource={installContents}
-            renderItem={(item) => contentRenderMini(install.href, item)}
-          />
-        </div>
+          <MyMasonry page={install.href} items={installContents} />
+        </RestrictedContent>
       ) : null}
     </div>
   )

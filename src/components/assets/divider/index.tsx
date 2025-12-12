@@ -8,6 +8,7 @@ import styles from './index.module.css'
  */
 const Divider = () => (
   <div className={styles.divider}>
+    <div className={styles.border1} />
     <Image
       className={styles.image}
       src="/logo.png"
@@ -15,6 +16,7 @@ const Divider = () => (
       width={50}
       height={50}
     />
+    <div className={styles.border2} />
   </div>
 )
 

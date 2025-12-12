@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { Typography } from 'antd'
 
-import styles from './index.module.css'
+import { RestrictedContent } from '@/components/assets/framework/content'
 
 // Tel
 const tel = <a href="tel:0743102886">0743102886</a>
@@ -13,7 +13,7 @@ const mail = <a href="mailto:contact@2ltech.fr">contact@2ltech.fr</a>
  * @returns Privacy
  */
 const Privacy = () => (
-  <div className={styles.content}>
+  <RestrictedContent>
     <Typography.Title level={3}>Politique de confidentialité</Typography.Title>
     <Typography.Text>2LTech.fr</Typography.Text>
 
@@ -302,7 +302,7 @@ const Privacy = () => (
       La présente politique, éditée le 02 juin 2025, a été mise à jour le 02
       juin 2025.
     </Typography.Paragraph>
-  </div>
+  </RestrictedContent>
 )
 
 export default Privacy

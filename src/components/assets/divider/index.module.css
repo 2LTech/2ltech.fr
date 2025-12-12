@@ -1,15 +1,22 @@
 .divider {
-  height: 50px;
-  background: linear-gradient(
-    90deg,
-    rgb(255, 255, 255) 0%,
-    rgba(121, 218, 235, 0.5) 100%
-  );
+  margin: 20px 0 0 0;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  justify-content: center;
+}
+
+.border1 {
+  height: 2px;
+  width: 40%;
+  background: linear-gradient(to right, #795549, #ffc059);
 }
 
 .image {
-  opacity: 0.25;
+  opacity: 0.5;
+  margin: -29px 10px 0 10px;
+}
+
+.border2 {
+  height: 2px;
+  width: 45%;
+  background: linear-gradient(to right, #79daeb, #f450fc);
 }

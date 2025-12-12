@@ -1,0 +1,26 @@
+.masonry {
+  margin: 16px;
+}
+
+.extra {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 6px 0;
+}
+
+.extra > img {
+  width: 64px;
+  height: 64px;
+}
+
+.actions li {
+  text-align: right !important;
+  margin-right: 12px !important;
+}
+
+@media (max-width: 900px) {
+  .masonry {
+    margin: 6px;
+  }
+}

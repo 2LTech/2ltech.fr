@@ -1,6 +1,13 @@
 .footer {
+  background: linear-gradient(rgba(255, 255, 255, 0), #79daeb) !important;
+  padding: 0 !important;
   color: white !important;
-  margin-top: auto;
+}
+
+.container {
+  max-width: 1000px;
+  padding: 20px;
+  margin: auto;
 }
 
 .descriptionLabel {
@@ -13,13 +20,15 @@
 .descriptionContent {
   display: flex;
   flex-direction: column;
+  gap: 8px;
 }
 
 .divider {
-  border-color: white;
+  border: 1px solid rgba(5, 5, 5, 0.06);
 }
 
 .legal {
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   font-size: 12px !important;
@@ -33,11 +42,13 @@
   color: #79daeb;
 }
 
-@media (max-width: 768px) {
-  .footer {
-    padding: 10px !important;
-  }
+.border {
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(to right, #f450fc, #79daeb);
+}
 
+@media (max-width: 900px) {
   .smallHidden {
     display: none;
   }

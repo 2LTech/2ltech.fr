@@ -1,34 +1,17 @@
 'use client'
 
-import React from 'react'
-import { ConfigProvider, Layout } from 'antd'
-
-import theme from '@/app/themeConfig'
-
-import Sider from '@/components/assets/sider'
-import Header from '@/components/assets/header'
-import Content from '@/components/assets/content'
+import Framework from '@/app/framework'
 
 import Contact from '@/components/contact'
-
-import styles from '../page.module.css'
 
 /**
  * Contact
  * @returns ContactPage
  */
 const ContactPage = () => (
-  <ConfigProvider theme={theme}>
-    <Layout className={styles.mainLayout} hasSider>
-      <Sider />
-      <Layout className={styles.layout}>
-        <Header />
-        <Content>
-          <Contact />
-        </Content>
-      </Layout>
-    </Layout>
-  </ConfigProvider>
+  <Framework>
+    <Contact />
+  </Framework>
 )
 
 export default ContactPage

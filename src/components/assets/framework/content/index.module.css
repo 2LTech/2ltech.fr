@@ -1,0 +1,30 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100vh !important;
+}
+
+.restrictedContent {
+  width: 100%;
+  padding: 20px;
+}
+
+.restrictedContentText {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.restrictedContentText h3 {
+  margin: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .restrictedContent {
+    padding: 10px;
+  }
+
+  .restrictedContent :global(.ant-list-item-extra) {
+    margin-left: 10px !important;
+  }
+}

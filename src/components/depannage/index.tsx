@@ -1,12 +1,9 @@
 import Image from 'next/image'
-import { List } from 'antd'
+
+import { RestrictedContent } from '@/components/assets/framework/content'
 
 import SubHeader from '@/components/assets/subHeader'
-import {
-  ContentItem,
-  contentRender,
-  footer
-} from '@/components/assets/contentRender'
+import MyList, { ContentItem } from '@/components/assets/mylist'
 
 // Content
 export const contents: ContentItem[] = [
@@ -66,16 +63,12 @@ export const contents: ContentItem[] = [
  * @returns Depannage
  */
 const Depannage = () => (
-  <div>
+  <>
     <SubHeader title="Dépannage" />
-    <List
-      itemLayout="vertical"
-      size="large"
-      dataSource={contents}
-      renderItem={contentRender}
-      footer={footer}
-    />
-  </div>
+    <RestrictedContent>
+      <MyList items={contents} />
+    </RestrictedContent>
+  </>
 )
 
 export default Depannage

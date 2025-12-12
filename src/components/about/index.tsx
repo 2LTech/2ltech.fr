@@ -2,19 +2,17 @@ import { Typography } from 'antd'
 import Link from 'next/link'
 
 import SubHeader from '@/components/assets/subHeader'
-
-import styles from './index.module.css'
+import { RestrictedContent } from '@/components/assets/framework/content'
 
 /**
  * About
  * @returns About
  */
-const About = () => {
-  return (
-    <div>
-      <SubHeader title={'À propos de moi'} />
-
-      <Typography.Paragraph className={styles.content}>
+const About = () => (
+  <>
+    <SubHeader title={'À propos de moi'} />
+    <RestrictedContent>
+      <Typography.Paragraph>
         Après une doctorat en Mathématiques Appliquées et une dizaine
         d&apos;années en start-up, il était temps pour moi de voler de mes
         propres ailes.
@@ -31,8 +29,8 @@ const About = () => {
         <Link href="/contact">Contactez-moi</Link> pour toute demande et nous
         pourrons prendre le temps d&apos;en discuter de vive voix.
       </Typography.Paragraph>
-    </div>
-  )
-}
+    </RestrictedContent>
+  </>
+)
 
 export default About

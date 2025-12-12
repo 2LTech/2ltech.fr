@@ -1,7 +1,5 @@
 import { Layout } from 'antd'
 
-import Footer from '@/components/assets/footer'
-
 import styles from './index.module.css'
 
 /**
@@ -17,11 +15,15 @@ export interface Props {
  * @returns Content
  */
 const Content: React.FunctionComponent<Props> = ({ children }) => {
-  return (
-    <Layout.Content className={styles.content}>
-      {children}
+  return <Layout.Content className={styles.content}>{children}</Layout.Content>
+}
 
-      <Footer />
+export const RestrictedContent: React.FunctionComponent<Props> = ({
+  children
+}) => {
+  return (
+    <Layout.Content className={styles.restrictedContent}>
+      <div className={styles.restrictedContentText}>{children}</div>
     </Layout.Content>
   )
 }

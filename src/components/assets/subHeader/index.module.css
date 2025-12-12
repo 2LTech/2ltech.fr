@@ -1,9 +1,14 @@
-.layout {
-  background: #79daeb !important;
-  min-height: unset !important;
+.container {
+  background: linear-gradient(#79daeb, rgba(255, 255, 255, 0)) !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 150px;
 }
 
 .content {
+  max-width: 1000px;
   display: flex;
   flex-direction: column;
   justify-content: center;

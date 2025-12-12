@@ -1,13 +1,13 @@
 import { Typography } from 'antd'
 
-import styles from './index.module.css'
+import { RestrictedContent } from '@/components/assets/framework/content'
 
 /**
  * Legal
  * @returns Legal
  */
 const Legal = () => (
-  <div className={styles.content}>
+  <RestrictedContent>
     <Typography.Title level={3}>Mentions Légales</Typography.Title>
     <Typography.Paragraph>
       Conformément aux dispositions de la loi n° 2004-575 du 21 juin 2004 pour
@@ -60,7 +60,7 @@ const Legal = () => (
       de Protection des Données Personnelles», conformément au Règlement Général
       sur la Protection des Données 2016/679 du 27 avril 2016 («RGPD»).
     </Typography.Paragraph>
-  </div>
+  </RestrictedContent>
 )
 
 export default Legal

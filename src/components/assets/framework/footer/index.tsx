@@ -6,7 +6,7 @@ import { HeartOutlined } from '@ant-design/icons'
 import menuItems from '@/defs/menu'
 import contactItems from '@/defs/contact'
 
-import packageJson from '../../../../package.json'
+import packageJson from '../../../../../package.json'
 
 import styles from './index.module.css'
 
@@ -16,9 +16,10 @@ import styles from './index.module.css'
  */
 const Footer = () => (
   <Layout.Footer className={styles.footer}>
-    <div>
+    <div className={styles.container}>
       <Descriptions
         colon={false}
+        column={{ xs: 1, sm: 1, md: 1, lg: 3, xl: 3, xxl: 3 }}
         classNames={{
           content: styles.descriptionContent
         }}
@@ -76,7 +77,9 @@ const Footer = () => (
         ]}
       />
     </div>
-    <Divider className={styles.divider} />
+
+    <div className={styles.border} />
+
     <div className={styles.legal}>
       <div>
         &copy;{new Date().getFullYear()}{' '}
