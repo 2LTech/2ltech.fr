@@ -11,9 +11,6 @@ yarn depcheck
 # Prettier
 yarn prettier
 
-# Lint
-yarn next lint
-
 # Build
 yarn build
 

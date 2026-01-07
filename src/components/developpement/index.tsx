@@ -18,6 +18,11 @@ export const contents: ContentItem[] = [
         <br />
         Site «Carte de visite» d&apos;une page ou site internet complet selon
         vos besoins.
+        <br />
+        <br />
+        <Link href="https://lesptitescagettes.org/" target="_blank">
+          Les P'tites Cagettes
+        </Link>
       </>
     ),
     extra: <Image src="/web.png" alt="" width={128} height={128} />
