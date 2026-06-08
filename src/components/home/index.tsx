@@ -38,52 +38,75 @@ const Home = () => {
       <SubHeader
         title={
           <div className={styles.subHeaderTitle}>
-            <Image src="/logo.png" alt="Logo" width={150} height={150} /> 2LTech
+            <Image src="/logo.png" alt="Logo" width={150} height={150} />
+            <span>2LTech</span>
           </div>
         }
-        subTitle="Développement web, dépannage informatique,
-		installation réseau et bien plus encore"
+        subTitle="Des solutions web, informatique et réseau claires, fiables et pensées pour durer."
         description={
-          <Space wrap className={styles.subHeaderDescription}>
-            {dev ? (
-              <Button
-                type="primary"
-                size="large"
-                icon={dev.icon}
-                href={dev.href}
-              >
-                {dev.label}
-              </Button>
-            ) : null}
-            {dep ? (
-              <Button
-                type="primary"
-                size="large"
-                icon={dep.icon}
-                href={dep.href}
-              >
-                {dep.label}
-              </Button>
-            ) : null}
-            {install ? (
-              <Button
-                type="primary"
-                size="large"
-                icon={install.icon}
-                href={install.href}
-              >
-                {install.label}
-              </Button>
-            ) : null}
-          </Space>
+          <div className={styles.heroPanel}>
+            <Space wrap className={styles.subHeaderDescription}>
+              {dev ? (
+                <Button
+                  type="primary"
+                  size="large"
+                  icon={dev.icon}
+                  href={dev.href}
+                >
+                  {dev.label}
+                </Button>
+              ) : null}
+              {dep ? (
+                <Button
+                  type="primary"
+                  size="large"
+                  icon={dep.icon}
+                  href={dep.href}
+                >
+                  {dep.label}
+                </Button>
+              ) : null}
+              {install ? (
+                <Button
+                  type="primary"
+                  size="large"
+                  icon={install.icon}
+                  href={install.href}
+                >
+                  {install.label}
+                </Button>
+              ) : null}
+            </Space>
+
+            <div className={styles.metrics}>
+              <div>
+                <strong>{devContents.length}</strong>
+                <span>expertises web et code</span>
+              </div>
+              <div>
+                <strong>{depContents.length}</strong>
+                <span>services de dépannage</span>
+              </div>
+              <div>
+                <strong>{installContents.length}</strong>
+                <span>installations réseau et serveur</span>
+              </div>
+            </div>
+          </div>
         }
       />
 
       {dev ? (
         <RestrictedContent>
-          <Link href={dev.href}>
-            <Typography.Title level={3}>{dev.label}</Typography.Title>
-          </Link>
+          <div className={styles.sectionHeader}>
+            <Link href={dev.href}>
+              <Typography.Title level={3}>{dev.label}</Typography.Title>
+            </Link>
+            <Typography.Paragraph>
+              Sites vitrines, applications métier et calcul scientifique avec
+              une approche pragmatique.
+            </Typography.Paragraph>
+          </div>
           <MyMasonry page={dev.href} items={devContents} />
         </RestrictedContent>
       ) : null}
@@ -92,9 +115,15 @@ const Home = () => {
 
       {dep ? (
         <RestrictedContent>
-          <Link href={dep.href}>
-            <Typography.Title level={3}>{dep.label}</Typography.Title>
-          </Link>
+          <div className={styles.sectionHeader}>
+            <Link href={dep.href}>
+              <Typography.Title level={3}>{dep.label}</Typography.Title>
+            </Link>
+            <Typography.Paragraph>
+              Diagnostic, récupération, périphériques et matériel pour retrouver
+              un poste de travail serein.
+            </Typography.Paragraph>
+          </div>
           <MyMasonry page={dep.href} items={depContents} />
         </RestrictedContent>
       ) : null}
@@ -103,9 +132,15 @@ const Home = () => {
 
       {install ? (
         <RestrictedContent>
-          <Link href={install.href}>
-            <Typography.Title level={3}>{install.label}</Typography.Title>
-          </Link>
+          <div className={styles.sectionHeader}>
+            <Link href={install.href}>
+              <Typography.Title level={3}>{install.label}</Typography.Title>
+            </Link>
+            <Typography.Paragraph>
+              Réseaux, serveurs et clusters configurés proprement, du petit
+              bureau aux besoins plus techniques.
+            </Typography.Paragraph>
+          </div>
           <MyMasonry page={install.href} items={installContents} />
         </RestrictedContent>
       ) : null}

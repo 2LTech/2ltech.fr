@@ -1,3 +1,39 @@
+.masonry {
+  margin: 0;
+}
+
+.masonry :global(.ant-card) {
+  overflow: hidden;
+  border: 1px solid rgba(8, 126, 139, 0.12);
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 16px 40px rgba(24, 36, 42, 0.07);
+}
+
+.masonry :global(.ant-card-head) {
+  border-bottom: 1px solid rgba(8, 126, 139, 0.1);
+}
+
+.masonry :global(.ant-card-head-title) {
+  color: #18242a;
+  font-weight: 800;
+  white-space: normal;
+}
+
+.masonry :global(.ant-card-extra) {
+  color: #087e8b;
+  font-size: 1.35rem;
+}
+
+.masonry :global(.ant-card-body) {
+  color: #435259;
+  line-height: 1.7;
+}
+
 .extra {
   margin-top: 20px;
+}
+
+.extra iframe {
+  border-radius: 8px;
 }

@@ -1,20 +1,29 @@
 .footer {
-  background: linear-gradient(rgba(255, 255, 255, 0), #79daeb) !important;
+  background: linear-gradient(135deg, #11252c, #17363e 62%, #3a2f2d) !important;
   padding: 0 !important;
-  color: white !important;
+  color: rgba(255, 255, 255, 0.82) !important;
 }
 
 .container {
-  max-width: 1000px;
-  padding: 20px;
+  max-width: 1120px;
+  padding: 46px 24px 34px;
   margin: auto;
 }
 
 .descriptionLabel {
   display: flex;
   align-items: center;
-  height: 50px;
-  color: rgba(0, 0, 0, 0.45);
+  gap: 10px;
+  min-height: 50px;
+  color: #ffffff;
+  font-size: 1.08rem;
+  font-weight: 800;
+}
+
+.descriptionLabel img {
+  padding: 5px;
+  border-radius: 12px;
+  background: #ffffff;
 }
 
 .descriptionContent {
@@ -23,33 +32,68 @@
   gap: 8px;
 }
 
+.descriptionContent :global(.ant-btn) {
+  justify-content: flex-start;
+  width: fit-content;
+  max-width: 100%;
+  white-space: normal;
+  height: auto;
+  min-height: 38px;
+  box-shadow: none;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+}
+
+.descriptionContent :global(.ant-btn:hover) {
+  background: #f4b740 !important;
+  border-color: #f4b740 !important;
+  color: #11252c !important;
+}
+
+.footer :global(.ant-descriptions-item-label) {
+  padding-bottom: 12px !important;
+}
+
 .divider {
   border: 1px solid rgba(5, 5, 5, 0.06);
 }
 
 .legal {
-  padding: 20px;
+  padding: 18px 24px;
   display: flex;
   justify-content: space-between;
+  gap: 18px;
   font-size: 12px !important;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .legal a {
-  color: unset;
+  color: #ffffff;
 }
 
 .smallHidden {
-  color: #79daeb;
+  color: rgba(255, 255, 255, 0.42);
 }
 
 .border {
-  height: 2px;
+  height: 1px;
   width: 100%;
-  background: linear-gradient(to right, #f450fc, #79daeb);
+  background: linear-gradient(
+    90deg,
+    rgba(204, 74, 84, 0.75),
+    rgba(244, 183, 64, 0.75),
+    rgba(8, 126, 139, 0.75)
+  );
 }
 
 @media (max-width: 900px) {
   .smallHidden {
     display: none;
+  }
+
+  .legal {
+    flex-direction: column;
+    text-align: center;
   }
 }

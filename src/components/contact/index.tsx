@@ -18,6 +18,7 @@ const Contact = () => (
 
     <RestrictedContent>
       <Masonry
+        className={styles.masonry}
         columns={{ xs: 1, md: 2 }}
         gutter={16}
         items={contactItems.map((contact, index) => ({

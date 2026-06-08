@@ -1,27 +1,86 @@
 .container {
-  background: linear-gradient(#79daeb, rgba(255, 255, 255, 0)) !important;
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(8, 126, 139, 0.96),
+      rgba(17, 37, 44, 0.98) 62%,
+      rgba(204, 74, 84, 0.9)
+    ),
+    linear-gradient(90deg, rgba(244, 183, 64, 0.24), transparent);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  min-height: 150px;
+  min-height: 280px;
+  padding: 72px 24px 68px;
+  isolation: isolate;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(120deg, rgba(255, 255, 255, 0.16), transparent 36%),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.06) 0,
+      rgba(255, 255, 255, 0.06) 1px,
+      transparent 1px,
+      transparent 84px
+    );
+  mask-image: linear-gradient(to bottom, black, transparent 92%);
 }
 
 .content {
-  max-width: 1000px;
+  max-width: 1120px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #ffffff !important;
+  color: #ffffff;
+  text-shadow: 0 1px 22px rgba(0, 0, 0, 0.22);
 }
 
 .content :global(.ant-typography) {
   color: inherit;
   text-align: center;
-  margin: 0.5em !important;
+  margin: 0 !important;
+}
+
+.content :global(h1.ant-typography) {
+  font-size: clamp(2.6rem, 6vw, 5.8rem);
+  line-height: 0.95;
+  font-weight: 900;
+}
+
+.content :global(h3.ant-typography) {
+  max-width: 780px;
+  margin-top: 20px !important;
+  font-size: clamp(1.1rem, 2vw, 1.55rem);
+  line-height: 1.42;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.86);
 }
 
 .content .description {
-  margin: 1.2em;
+  margin-top: 34px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    min-height: 240px;
+    padding: 52px 16px 46px;
+  }
+
+  .content :global(h1.ant-typography) {
+    font-size: 3rem;
+  }
+
+  .content :global(h3.ant-typography) {
+    font-size: 1.05rem;
+  }
 }

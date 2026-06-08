@@ -1,26 +1,93 @@
 .masonry {
-  margin: 16px;
+  margin: 0;
 }
 
 .extra {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 6px 0;
+  margin: 0 0 8px 16px;
+  width: 74px;
+  height: 74px;
+  border-radius: 18px;
+  background:
+    linear-gradient(135deg, rgba(8, 126, 139, 0.1), rgba(244, 183, 64, 0.16)),
+    #ffffff;
+  box-shadow: inset 0 0 0 1px rgba(8, 126, 139, 0.12);
 }
 
 .extra > img {
-  width: 64px;
-  height: 64px;
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
 }
 
 .actions li {
   text-align: right !important;
-  margin-right: 12px !important;
+  margin-right: 16px !important;
+}
+
+.masonry :global(.ant-card) {
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid rgba(8, 126, 139, 0.12);
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.96),
+      rgba(247, 251, 252, 0.96)
+    ),
+    #ffffff;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+.masonry :global(.ant-card:hover) {
+  transform: translateY(-4px);
+  border-color: rgba(8, 126, 139, 0.26);
+  box-shadow:
+    0 22px 48px rgba(24, 36, 42, 0.12),
+    0 6px 16px rgba(24, 36, 42, 0.06);
+}
+
+.masonry :global(.ant-card-head) {
+  min-height: 92px;
+  padding: 20px 20px 8px !important;
+  border-bottom: 0;
+}
+
+.masonry :global(.ant-card-head-title) {
+  color: #18242a;
+  font-size: 1.24rem;
+  font-weight: 800;
+  white-space: normal;
+}
+
+.masonry :global(.ant-card-body) {
+  min-height: 92px;
+  padding: 8px 20px 20px !important;
+  color: #52626a;
+  line-height: 1.65;
+}
+
+.masonry :global(.ant-card-actions) {
+  border-top: 1px solid rgba(8, 126, 139, 0.1);
+  background: rgba(255, 255, 255, 0.62);
+}
+
+.masonry :global(.ant-btn) {
+  min-width: 48px;
+  box-shadow: none;
 }
 
 @media (max-width: 900px) {
   .masonry {
-    margin: 6px;
+    margin: 0;
+  }
+
+  .masonry :global(.ant-card-head) {
+    min-height: auto;
   }
 }
