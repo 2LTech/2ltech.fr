@@ -26,8 +26,8 @@ const About = () => (
         parc informatique, choix du matériel informatique / réseau, ...
         <br />
         <br />
-        <Link href="/contact">Contactez-moi</Link> pour toute demande et nous
-        pourrons prendre le temps d&apos;en discuter de vive voix.
+        <Link href="/contact">Contactez-moi</Link>&nbsp;pour toute demande et
+        nous pourrons prendre le temps d&apos;en discuter de vive voix.
       </Typography.Paragraph>
     </RestrictedContent>
   </>

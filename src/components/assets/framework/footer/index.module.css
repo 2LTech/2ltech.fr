@@ -10,6 +10,10 @@
   margin: auto;
 }
 
+.description :global(.ant-descriptions-view) > table {
+  table-layout: auto !important;
+}
+
 .descriptionLabel {
   display: flex;
   align-items: center;

@@ -18,6 +18,7 @@ const Footer = () => (
   <Layout.Footer className={styles.footer}>
     <div className={styles.container}>
       <Descriptions
+        className={styles.description}
         colon={false}
         column={{ xs: 1, sm: 1, md: 1, lg: 3, xl: 3, xxl: 3 }}
         classNames={{
