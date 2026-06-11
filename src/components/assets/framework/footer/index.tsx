@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Button, Descriptions, Divider, Layout } from 'antd'
+import { Button, Descriptions, Layout } from 'antd'
 import { HeartOutlined } from '@ant-design/icons'
 
 import menuItems from '@/defs/menu'

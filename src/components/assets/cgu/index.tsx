@@ -1,8 +1,7 @@
 import Link from 'next/link'
 import { Typography } from 'antd'
 
-import styles from './index.module.css'
-import { RestrictedContent } from '../framework/content'
+import { RestrictedContent } from '@/components/assets/framework/content'
 
 // Mail
 const mail = <a href="mailto:contact@2ltech.fr">contact@2ltech.fr</a>

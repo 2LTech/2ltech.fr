@@ -38,7 +38,7 @@ const MyMasonry: React.FunctionComponent<Props> = ({ page, items }) => (
           extra={item.extra}
           title={item.title}
           actions={[
-            <Link href={`${page}/#${item.key}`}>
+            <Link key="open" href={`${page}/#${item.key}`}>
               <Button type="primary">
                 <ArrowRightOutlined />
               </Button>

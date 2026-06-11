@@ -20,11 +20,11 @@ export const contents: ContentItem[] = [
         vos besoins.
         <br />
         <br />
-        <Link href="http://lesptitescagettes.org/" target="_blank">
+        <Link href="https://lesptitescagettes.org/" target="_blank">
           Les P'tites Cagettes
         </Link>
         <br />
-        <Link href="http://treignac-sur-vezere.fr/" target="_blank">
+        <Link href="https://treignac-sur-vezere.fr/" target="_blank">
           Treignac-sur-Vézère
         </Link>
       </>

@@ -1,8 +1,6 @@
 import Image from 'next/image'
-import { List } from 'antd'
 
 import { RestrictedContent } from '@/components/assets/framework/content'
-
 import SubHeader from '@/components/assets/subHeader'
 import MyList, { ContentItem } from '@/components/assets/mylist'
 

@@ -27,7 +27,7 @@ const MyList: React.FunctionComponent<Props> = ({ items }) => (
     <ul className={styles.list}>
       {items.map((item) => (
         <li key={item.key} className={styles.item}>
-          <a className={styles.anchor} id={item.key}>
+          <a className={styles.anchor} id={item.key} href={`#${item.key}`}>
             {item.key}
           </a>
           <div className={styles.itemText}>
