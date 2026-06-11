@@ -2,7 +2,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import { RestrictedContent } from '@/components/assets/framework/content'
-
 import SubHeader from '@/components/assets/subHeader'
 import MyList, { ContentItem } from '@/components/assets/mylist'
 
